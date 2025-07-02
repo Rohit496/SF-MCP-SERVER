@@ -41,6 +41,30 @@ node build/index.js
 
 The server will start and listen for MCP requests over stdio.
 
+## Claude Configuration
+
+To use Claude with this MCP server, configure your Claude client as follows:
+
+1. Set the MCP server endpoint to the location where this server is running (usually stdio or a local port if you adapt the transport).
+2. Ensure your Salesforce CLI is authenticated and accessible from the environment where the server runs.
+3. Use the provided MCP tools (`list_connected_salesforce_orgs` and `query_records`) from your Claude or MCP-compatible client.
+
+### Example Claude Client Configuration
+
+- **MCP Server Endpoint:** `local` (or specify the port if using a network transport)
+- **Tooling:**
+  - `list_connected_salesforce_orgs`
+  - `query_records`
+
+Refer to your Claude client documentation for details on connecting to a local MCP server.
+
+## Images
+
+Below are example images for configuration and usage:
+
+![Claude Configuration Example 1](Img1.png)
+![Claude Configuration Example 2](img2.png)
+
 ## MCP Tools
 
 ### 1. `list_connected_salesforce_orgs`
